@@ -12,7 +12,9 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-4 col-sm-4">
-                <img src="{{ asset('storage/cover_images/'.$post->cover_image) }}" class="img-fluid img-thumbnail" alt="{{ Auth::user()->name }}'s Image">
+                {{-- <img src="{{ asset('storage/cover_images/'.$post->cover_image) }}" class="img-fluid img-thumbnail" alt="{{ Auth::user()->name }}'s Image">   --}}
+                <img src="/storage/cover_images/{{$post->cover_image}}" class="img-fluid" alt="{{ Auth::user()->name }}'s Image">
+
                 </div>
                 <div class="col-md-8 col-sm-8">
                     <h3 class="text-muted"><a href="/posts/{{ $post->id }}">{{ $post->title }}</a></h3>
